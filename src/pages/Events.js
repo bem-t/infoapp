@@ -23,8 +23,9 @@ export const Events = () => {
              <tr>
                <th scope="col">ID</th>
                <th scope="col">TYPE</th>
-               <th scope="col">NAME</th>
-               <th scope="col">LINK</th>
+               <th scope="col">
+                NAME
+                </th>
                <th scope="col">CREATED</th>
              </tr>
            </thead>
@@ -35,8 +36,11 @@ export const Events = () => {
              <tr>
                <th scope="row">{event.id}</th>
                <td>{event.type}</td>
-               <td>{event.repo.name}</td>
-               <td>{event.repo.url}</td>
+               <td>
+               <a href={event.repo.url}>
+                {event.repo.name}
+                </a></td>
+               
                <td>{event.created_at}</td>
              </tr>
            </tbody>

@@ -1,8 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Nav from "react-bootstrap/Nav";
-import Container from 'react-bootstrap/Container';
-import Navbar from 'react-bootstrap/Navbar';
 
 
 export const NavBar = () => {
@@ -20,6 +18,12 @@ export const NavBar = () => {
       </Nav.Item>
       <Nav.Item>
         <Link to="/repos">Repos</Link>
+      </Nav.Item>
+      <Nav.Item>
+        <Link to="/hooks">Hooks</Link>
+      </Nav.Item>
+      <Nav.Item>
+        <Link to="/issues">Issues</Link>
       </Nav.Item>
       </Nav>
     </div>

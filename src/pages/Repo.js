@@ -22,7 +22,6 @@ export const Repo = () => {
              <tr>
                <th scope="col">ID</th>
                <th scope="col">NAME</th>
-               <th scope="col">LINK</th>
                <th scope="col">DESCRIPTION</th>
                <th scope="col">LANGUAGE</th>
                <th scope="col">CREATED</th>
@@ -36,8 +35,11 @@ export const Repo = () => {
            <tbody>
              <tr>
                <th scope="row">{repo.id}</th>
-               <td>{repo.name}</td>
-               <td>{repo.html_url}</td>
+               <td>
+               <a href={repo.html_url}>
+                {repo.name}
+                </a>
+                </td>
                <td>{repo.description}</td>
                <td>{repo.language}</td>
                <td>{repo.created_at}</td>

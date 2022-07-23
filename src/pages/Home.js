@@ -24,8 +24,7 @@ export const Home = () => {
              <tr>
                <th scope="col">ID</th>
                <th scope="col">NAME</th>
-               <th scope="col">LINK</th>
-               <th scope="col">IsVERIFIED</th>
+               <th scope="col">VERIFIED</th>
                <th scope="col">CREATED</th>
                <th scope="col">UPDATED</th>
              </tr>
@@ -33,8 +32,11 @@ export const Home = () => {
            <tbody>
              <tr>
                <th scope="row">{info.id}</th>
-               <td>{info.name}</td>
-               <td>{info.html_url}</td>
+               <td>
+                <a href={info.html_url}>
+                {info.name}
+                </a>
+                </td>
                <td>{info.is_verified ? <p>false</p> : <p>true</p>}</td>
                <td>{info.created_at}</td>
                <td>{info.updated_at}</td>

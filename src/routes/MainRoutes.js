@@ -14,6 +14,8 @@ const MainRoutes = () => (
       <Route exact path="/members" element={<Members />} />
       <Route exact path="/repos" element={<Repo />} />
       <Route exact path="/events" element={<Events />} />
+
+      <Route path="/*" element={<NotFound />} />
     </Routes>
   </React.Suspense>
 )

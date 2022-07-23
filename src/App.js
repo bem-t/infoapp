@@ -5,9 +5,6 @@ import MainRoutes from "./routes/MainRoutes";
 function App() {
  return (
   <div>
-    <header>
-      header
-    </header>
       <nav>
         <NavBar />
       </nav>
