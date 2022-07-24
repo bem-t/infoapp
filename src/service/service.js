@@ -9,7 +9,6 @@ export const getData = async (url) => {
       url: `${mainUrl}${url}`,
     });
     return response.data;
-    
   } catch (err) {
     console.error(err);
     throw err;

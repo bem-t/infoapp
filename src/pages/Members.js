@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { getData } from "../service/service";
-import Table from "react-bootstrap/Table";
+import { MyTable } from "../components/Table";
 
 export const Members = () => {
   const [member, getMember] = useState([]);
@@ -14,38 +14,18 @@ export const Members = () => {
     getMembers();
   }, []);
 
-  console.log(member);
+  const column = [
+    { heading: "ID", value: "id" },
+    { heading: "USER NAME", value: "login" },
+    { heading: "LINK", value: "html_url" },
+    { heading: "AVATAR", value: "avatar_url" },
+    { heading: "TYPE", value: "type" },
+    { heading: "ADMIN", value: "site_admin" },
+  ];
 
   return (
     <div className="App">
-      <Table responsive="sm">
-        <thead>
-          <tr>
-            <th scope="col">ID</th>
-            <th scope="col">LOGIN NAME</th>
-            <th scope="col">AVATAR</th>
-            <th scope="col">TYPE</th>
-            <th scope="col">ADMIN</th>
-          </tr>
-        </thead>
-        {member.map((member) => {
-          return (
-            <tbody>
-              <tr>
-                <th scope="row">{member.id}</th>
-                <td>
-                  <a href={member.html_url}>{member.login}</a>
-                </td>
-                <td>
-                  <img src="{member.avatar_url}" />
-                </td>
-                <td>{member.type}</td>
-                <td>{member.site_admin ? <p>true</p> : <p>false</p>}</td>
-              </tr>
-            </tbody>
-          );
-        })}
-      </Table>
+      <MyTable data={member} column={column} />
     </div>
   );
 };

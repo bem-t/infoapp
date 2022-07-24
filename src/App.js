@@ -1,4 +1,4 @@
-import { NavBar } from "./pages/NavBar";
+import { NavBar } from "./components/NavBar";
 import MainRoutes from "./routes/MainRoutes";
 
 
