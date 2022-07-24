@@ -1,4 +1,5 @@
 import React from "react";
+import 'bootstrap/dist/css/bootstrap.css';
 import { useEffect, useState } from "react";
 import { getData } from "../service/service";
 import { MyTable } from "../components/Table";

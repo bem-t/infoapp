@@ -1,19 +1,17 @@
-import { NavBar } from "./components/NavBar";
+import 'bootstrap/dist/css/bootstrap.css';
 import MainRoutes from "./routes/MainRoutes";
-
+import { NavBar } from "./components/NavBar";
 
 function App() {
  return (
-  <div>
-      <nav>
-        <NavBar />
-      </nav>
-    <main>
-      <article>
+  <>
+      <div>
+          <NavBar />
+      </div>
+    <main >
         <MainRoutes />
-      </article>
     </main>
-  </div>
+  </>
  )
 }
 

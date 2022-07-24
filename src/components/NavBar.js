@@ -1,28 +1,42 @@
 import React from "react";
+import "bootstrap/dist/css/bootstrap.css";
 import { Link } from "react-router-dom";
 import Nav from "react-bootstrap/Nav";
+import { NavLink } from "reactstrap";
 
 export const NavBar = () => {
   return (
     <div>
-      <Nav fill variant="tabs">
+      <Nav>
         <Nav.Item>
-          <Link to="/">Home</Link>
+          <NavLink tag={Link} to="/">
+            HOME
+          </NavLink>
         </Nav.Item>
         <Nav.Item>
-          <Link to="/members">Members</Link>
+          <NavLink tag={Link} to="/members">
+            MEMBERS
+          </NavLink>
         </Nav.Item>
         <Nav.Item>
-          <Link to="/events">Events</Link>
+          <NavLink tag={Link} to="/events">
+            EVENTS
+          </NavLink>
         </Nav.Item>
         <Nav.Item>
-          <Link to="/repos">Repos</Link>
+          <NavLink tag={Link} to="/repos">
+            REPOS
+          </NavLink>
         </Nav.Item>
         <Nav.Item>
-          <Link to="/hooks">Hooks</Link>
+          <NavLink tag={Link} to="/hooks">
+            HOOKS
+          </NavLink>
         </Nav.Item>
         <Nav.Item>
-          <Link to="/issues">Issues</Link>
+          <NavLink tag={Link} to="/issues">
+            ISSUES
+          </NavLink>
         </Nav.Item>
       </Nav>
     </div>

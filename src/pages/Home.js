@@ -1,5 +1,6 @@
-import axios from "axios";
 import React from "react";
+import 'bootstrap/dist/css/bootstrap.css';
+import axios from "axios";
 import { useEffect, useState } from "react";
 import Table from "react-bootstrap/Table";
 

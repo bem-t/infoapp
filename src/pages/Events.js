@@ -1,4 +1,5 @@
 import React from "react";
+import 'bootstrap/dist/css/bootstrap.css';
 import { useEffect, useState } from "react";
 import { getData } from "../service/service";
 import { MyTable } from "../components/Table";
@@ -13,12 +14,12 @@ export const Events = () => {
     };
     getEvents();
   }, []);
-
+console.log(event);
   const column = [
     { heading: "ID", value: "id" },
     { heading: "TYPE", value: "type" },
-    { heading: "NAME", value: "name" },
-    { heading: "LINK", value: "html_url" },
+    { heading: "NAME", value: "repo.name" },
+    { heading: "LINK", value: "repo.url" },
     { heading: "CREATED", value: "created_at" },
   ];
 
