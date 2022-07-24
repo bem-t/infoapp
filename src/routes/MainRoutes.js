@@ -8,7 +8,6 @@ import { Repo } from '../pages/Repo'
 
 
 const MainRoutes = () => (
-  <React.Suspense fallback={<div>Loading...</div>}>
     <Routes>
       <Route exact path="/" element={<Home />} />
       <Route exact path="/members" element={<Members />} />
@@ -17,7 +16,6 @@ const MainRoutes = () => (
 
       <Route path="/*" element={<NotFound />} />
     </Routes>
-  </React.Suspense>
 )
 
 export default MainRoutes

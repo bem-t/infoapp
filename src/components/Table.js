@@ -1,7 +1,6 @@
 import React from "react";
-import 'bootstrap/dist/css/bootstrap.css';
 import Table from "react-bootstrap/Table";
-import Image from 'react-bootstrap/Image'
+import Image from "react-bootstrap/Image";
 
 export const MyTable = ({ data, column }) => {
   return (
@@ -9,7 +8,7 @@ export const MyTable = ({ data, column }) => {
       <thead>
         <tr>
           {column.map((item, index) => (
-            <TableHeadItem item={item} key={index}/>
+            <TableHeadItem item={item} key={index} />
           ))}
         </tr>
       </thead>
@@ -30,18 +29,34 @@ const TableRow = ({ item, column }) => (
       if (columnItem.value.includes("avatar")) {
         return (
           <td key={index}>
-            <Image roundedCircle height={50} src={item[`${columnItem.value}`]}/>
+            <Image
+              roundedCircle
+              height={50}
+              src={item[`${columnItem.value}`]}
+            />
           </td>
         );
       }
-      
-      if (columnItem.value.includes("url")) {
+
+      if (columnItem.value.includes("html")) {
         return (
           <td key={index}>
             <a href={item[`${columnItem.value}`]}>click</a>
           </td>
         );
+      }
+
+      if (columnItem.value.includes(".")) {
+        const itemSplit = columnItem.value.split(".");
+        if (columnItem.value.includes("url")) {
+          return (
+            <td key={index}>
+              <a href={`${item[itemSplit[0]][itemSplit[1]]}`}>click</a>
+            </td>
+          );
         }
+        return <td key={index}>{item[itemSplit[0]][itemSplit[1]]}</td>;
+      }
 
       return <td key={index}>{item[`${columnItem.value}`]}</td>;
     })}
