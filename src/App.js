@@ -1,17 +1,18 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import MainRoutes from "./routes/MainRoutes";
-import { NavBar } from "./components/NavBar";
+import NavBar from "./components/NavBar";
+import Container from 'react-bootstrap/Container';
 
 function App() {
  return (
-  <>
-      <div>
-          <NavBar />
-      </div>
-    <main >
-        <MainRoutes />
-    </main>
-  </>
+    <>
+    <NavBar />
+        <main >
+            <Container className='mt-5'>
+                <MainRoutes />
+            </Container>
+        </main>
+    </>
  )
 }
 

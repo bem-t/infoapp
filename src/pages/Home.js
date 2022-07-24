@@ -16,7 +16,7 @@ export const Home = () => {
 
   return (
     <div>
-      <Table>
+      <Table size="sm" striped hover bordered responsive='sm'>
         <thead>
           <tr>
             <th scope="col">ID</th>

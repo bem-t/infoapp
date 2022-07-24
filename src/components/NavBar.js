@@ -1,43 +1,22 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Nav from "react-bootstrap/Nav";
-import { NavLink } from "reactstrap";
+import Container from 'react-bootstrap/Container';
+import Navbar from 'react-bootstrap/Navbar';
 
-export const NavBar = () => {
+const NavBarCom = () => {
   return (
-    <div>
-      <Nav>
-        <Nav.Item>
-          <NavLink tag={Link} to="/">
-            HOME
-          </NavLink>
-        </Nav.Item>
-        <Nav.Item>
-          <NavLink tag={Link} to="/members">
-            MEMBERS
-          </NavLink>
-        </Nav.Item>
-        <Nav.Item>
-          <NavLink tag={Link} to="/events">
-            EVENTS
-          </NavLink>
-        </Nav.Item>
-        <Nav.Item>
-          <NavLink tag={Link} to="/repos">
-            REPOS
-          </NavLink>
-        </Nav.Item>
-        <Nav.Item>
-          <NavLink tag={Link} to="/hooks">
-            HOOKS
-          </NavLink>
-        </Nav.Item>
-        <Nav.Item>
-          <NavLink tag={Link} to="/issues">
-            ISSUES
-          </NavLink>
-        </Nav.Item>
+    <Navbar bg="dark" variant="dark">
+    <Container>
+      <Nav className="me-auto">
+        <Nav.Link href="/">Home</Nav.Link>
+        <Nav.Link href="/members">Members</Nav.Link>
+        <Nav.Link href="/events">Events</Nav.Link>
+        <Nav.Link href="/repos">Repos</Nav.Link>
+        <Nav.Link href="/hooks">Hooks</Nav.Link>
+        <Nav.Link href="/issues">Issues</Nav.Link>
       </Nav>
-    </div>
+    </Container>
+  </Navbar>
   );
 };
+export default NavBarCom

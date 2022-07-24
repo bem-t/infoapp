@@ -4,7 +4,7 @@ import Image from "react-bootstrap/Image";
 
 export const MyTable = ({ data, column }) => {
   return (
-    <Table responsive="sm" striped hover>
+    <Table size="sm" striped hover bordered responsive='sm'>
       <thead>
         <tr>
           {column.map((item, index) => (
